@@ -41,7 +41,7 @@ public class ProdutoDAO extends DAO {
 		
 		try {
 			Statement st = conexao.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
-			String sql = "SELECT * FROM produto WHERE id=" + codigo;
+			String sql = "SELECT * FROM produto WHERE codigo=" + codigo;
 			System.out.println(sql);
 			ResultSet rs = st.executeQuery(sql);	
 	        if(rs.next()){            
